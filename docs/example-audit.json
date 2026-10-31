@@ -1,0 +1,18 @@
+{
+  "ai_classification": "Support",
+  "result": "Correct",
+  "score": 88,
+  "summary": "A synthetic customer requested help with a demonstration account.",
+  "report": "The agent greeted the customer and provided a relevant next step.",
+  "strengths": [
+    "Clear greeting",
+    "Relevant response"
+  ],
+  "issues": [],
+  "evidence": [
+    "AGENT: Hello, how can I help you today?"
+  ],
+  "recommendations": [
+    "Confirm that the customer understands the next step"
+  ]
+}

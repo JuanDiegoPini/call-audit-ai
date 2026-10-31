@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Call Audit AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Call Audit AI</h1>
+    <p class="privacy">
+      Local demonstration only. Obtain consent before recording and never use
+      production calls or personal identifiers in a demo.
+    </p>
+
+    <section class="card">
+      <h2>Datos de la llamada</h2>
+
+      <label for="referenciaAgente">Referencia ficticia del agente</label>
+      <input id="referenciaAgente" type="text" value="demo-agent-01" maxlength="64" />
+
+      <label for="nombreAgente">Nombre ficticio</label>
+      <input id="nombreAgente" type="text" value="Demo Agent" maxlength="100" />
+
+      <label for="clasificacionAgente">Clasificación seleccionada por el agente</label>
+      <select id="clasificacionAgente">
+        <option value="Consulta">Consulta</option>
+        <option value="Reclamo" selected>Reclamo</option>
+        <option value="Solicitud">Solicitud</option>
+      </select>
+
+      <div class="buttons">
+        <button type="button" id="btnIniciar" onclick="iniciarLlamadaCompleta()">
+          Iniciar captura de demostración
+        </button>
+
+        <button type="button" id="btnDetener" class="danger" onclick="detenerYAnalizar()" disabled>
+          Detener y analizar demo
+        </button>
+      </div>
+
+      <p><strong>ID llamada:</strong> <span id="idLlamada">Sin iniciar</span></p>
+      <p><strong>Estado llamada:</strong> <span id="estadoLlamada">Sin iniciar</span></p>
+      <p><strong>Micrófono agente:</strong> <span id="estadoMic">No iniciado</span></p>
+      <p><strong>Audio cliente:</strong> <span id="estadoCliente">No iniciado</span></p>
+
+      <p class="nota">
+        El navegador pedirá acceso al micrófono y a una fuente compartida con audio.
+        Usa únicamente audio sintético o participantes que hayan dado su consentimiento.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Transcripción en vivo</h2>
+      <pre id="segmentos">Sin segmentos todavía</pre>
+    </section>
+
+    <section class="card">
+      <h2>Reporte final</h2>
+      <pre id="reporteFinal">Sin reporte todavía</pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
